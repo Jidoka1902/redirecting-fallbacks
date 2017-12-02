@@ -1,6 +1,7 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
+    routing_slug_regex: '[a-z0-9]+(?:-[a-z0-9]+)*'
 
 services:
     # default configuration for services in *this* file
@@ -26,3 +27,16 @@ services:
     App\Controller\:
         resource: '../src/Controller'
         tags: ['controller.service_arguments']
+
+
+
+    # MANUALLY WIREING BECAUSE OF PARAMETERS
+    App\Service\RedirectResolver:
+        arguments:
+            $mapping:
+                - { path: '/clean-coding/principles', target: 'app_cleancoding_principles'}
+                - { path: '/clean-coding/examples', target: 'app_cleancoding_examples'}
+                - { path: '/clean-coding', target: 'app_cleancoding_index'}
+                - { path: '/blog/posts', target: 'app_blog_search'}
+                - { path: '/blog', target: 'app_blog_index'}
+                - { path: '/', target: 'app_frontpage_index'}
