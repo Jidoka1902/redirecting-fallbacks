@@ -52,6 +52,11 @@ class MultipleRedirectResolver implements RedirectResolver
                 /** @var string $redirectPath */
                 $redirectPath = $this->urlGenerator->generate($item[RedirectResolverConfig::TARGET_KEY]);
 
+                # prevent redirecting to the same path and so creating a loop
+                if ($requestPath === $redirectPath) {
+                    continue;
+                }
+
                 return $redirectPath;
             }
 
