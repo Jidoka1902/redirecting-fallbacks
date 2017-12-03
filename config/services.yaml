@@ -32,6 +32,9 @@ services:
     App\Service\Redirect\Resolver\RedirectResolver:
         alias: App\Service\Redirect\Resolver\MultipleRedirectResolver
 
+    App\Service\Redirect\UrlGenerator\UrlGenerator:
+        alias: App\Service\Redirect\UrlGenerator\FrameworkUrlGeneratorAdapter
+
     # MANUALLY WIREING BECAUSE OF PARAMETERS
     App\Service\Redirect\Resolver\MultipleRedirectResolver:
         arguments:

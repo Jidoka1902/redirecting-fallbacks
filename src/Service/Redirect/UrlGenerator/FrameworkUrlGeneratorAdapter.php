@@ -3,16 +3,16 @@
 namespace App\Service\Redirect\UrlGenerator;
 
 
-use Symfony\Component\Routing\Router;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
-class RouterUrlGenerator implements UrlGenerator
+class FrameworkUrlGeneratorAdapter implements UrlGenerator
 {
     /**
-     * @var Router
+     * @var UrlGeneratorInterface
      */
     private $router;
 
-    public function __construct(Router $router)
+    public function __construct(UrlGeneratorInterface $router)
     {
         $this->router = $router;
     }
