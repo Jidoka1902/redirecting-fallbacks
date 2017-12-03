@@ -3,18 +3,18 @@
 namespace App\Service\Redirect\Resolver;
 
 
-use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
+use App\Service\Redirect\UrlGenerator\UrlGenerator;
 
 class SingleRedirectResolver implements RedirectResolver
 {
 
-    /** @var UrlGeneratorInterface */
+    /** @var UrlGenerator */
     private $urlGenerator;
 
     /** @var string */
     private $target;
 
-    public function __construct(UrlGeneratorInterface $urlGenerator, string $target)
+    public function __construct(UrlGenerator $urlGenerator, string $target)
     {
         $this->urlGenerator = $urlGenerator;
         $this->target = $target;

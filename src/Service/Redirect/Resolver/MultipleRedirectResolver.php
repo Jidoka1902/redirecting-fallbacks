@@ -4,7 +4,7 @@ namespace App\Service\Redirect\Resolver;
 
 
 use App\Service\Redirect\Config\RedirectResolverConfig;
-use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
+use App\Service\Redirect\UrlGenerator\UrlGenerator;
 
 class MultipleRedirectResolver implements RedirectResolver
 {
@@ -12,10 +12,10 @@ class MultipleRedirectResolver implements RedirectResolver
     /** @var array */
     private $redirectMapping;
 
-    /** @var UrlGeneratorInterface */
+    /** @var UrlGenerator */
     private $urlGenerator;
 
-    public function __construct(array $mapping, UrlGeneratorInterface $urlGenerator)
+    public function __construct(array $mapping, UrlGenerator $urlGenerator)
     {
         $this->redirectMapping = $mapping;
         $this->urlGenerator = $urlGenerator;
