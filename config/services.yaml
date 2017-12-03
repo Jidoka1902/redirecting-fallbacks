@@ -28,10 +28,12 @@ services:
         resource: '../src/Controller'
         tags: ['controller.service_arguments']
 
-
+    # ALIASES
+    App\Service\Redirect\Resolver\RedirectPathResolver:
+        alias: App\Service\Redirect\Resolver\MultipleRedirectPathResolver
 
     # MANUALLY WIREING BECAUSE OF PARAMETERS
-    App\Service\RedirectResolver:
+    App\Service\Redirect\Resolver\MultipleRedirectPathResolver:
         arguments:
             $mapping:
                 - { path: '/clean-coding/principles', target: 'app_cleancoding_principles'}

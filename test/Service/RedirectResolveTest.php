@@ -3,7 +3,7 @@
 namespace Tests\Service;
 
 
-use App\Service\RedirectResolver;
+use App\Service\Redirect\Resolver\MultipleRedirectResolver;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
@@ -23,7 +23,7 @@ class RedirectResolveTest extends TestCase
 
         $generatorMock->method('generate')->willReturnArgument(0);
 
-        $resolver = new RedirectResolver($generatorMock, $configuration);
+        $resolver = new MultipleRedirectResolver($generatorMock, $configuration);
 
         $actualResult = $resolver->resolve($requestPath);
 
