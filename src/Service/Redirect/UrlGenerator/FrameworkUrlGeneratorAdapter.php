@@ -24,7 +24,7 @@ class FrameworkUrlGeneratorAdapter implements UrlGenerator
      */
     public function generate(string $route): string
     {
-        return $this->router->generate($route);
+        return $this->router->generate($route, array(),UrlGeneratorInterface::ABSOLUTE_PATH);
     }
 
 
