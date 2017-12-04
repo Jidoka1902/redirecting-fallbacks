@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Service\Redirect\Resolver;
+namespace Jidoka1902\RedirectingFallbacks\Resolver;
 
 
-use App\Service\Redirect\Config\RedirectResolverConfig;
-use App\Service\Redirect\UrlGenerator\UrlGenerator;
+use Jidoka1902\RedirectingFallbacks\Config\RedirectResolverConfig;
+use Jidoka1902\RedirectingFallbacks\UrlGenerator\UrlGenerator;
 
 class MultipleRedirectResolver implements RedirectResolver
 {

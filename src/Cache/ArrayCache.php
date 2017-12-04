@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Service\Redirect\Cache;
+namespace Jidoka1902\RedirectingFallbacks\Cache;
 
 
 class ArrayCache implements RedirectResolverCache

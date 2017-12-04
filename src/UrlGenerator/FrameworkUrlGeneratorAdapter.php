@@ -1,10 +1,15 @@
 <?php
 
-namespace App\Service\Redirect\UrlGenerator;
+namespace Jidoka1902\RedirectingFallbacks\UrlGenerator;
 
 
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
+/**
+ * Class FrameworkUrlGeneratorAdapter
+ * @package Jidoka1902\RedirectingFallbacks\Resolver
+ * @todo extract into symfony integration
+ */
 class FrameworkUrlGeneratorAdapter implements UrlGenerator
 {
     /**

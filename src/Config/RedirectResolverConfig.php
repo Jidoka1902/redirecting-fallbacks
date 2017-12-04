@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Service\Redirect\Config;
+namespace Jidoka1902\RedirectingFallbacks\Config;
 
 
 interface RedirectResolverConfig

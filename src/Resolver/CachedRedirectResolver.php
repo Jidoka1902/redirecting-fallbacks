@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Service\Redirect\Resolver;
+namespace Jidoka1902\RedirectingFallbacks\Resolver;
 
 
-use App\Service\Redirect\Cache\NullCache;
-use App\Service\Redirect\Cache\RedirectResolverCache;
+use Jidoka1902\RedirectingFallbacks\Cache\NullCache;
+use Jidoka1902\RedirectingFallbacks\Cache\RedirectResolverCache;
 
 class CachedRedirectResolver implements RedirectResolver
 {

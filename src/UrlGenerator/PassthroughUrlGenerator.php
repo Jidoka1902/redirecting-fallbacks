@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Service\Redirect\UrlGenerator;
+namespace Jidoka1902\RedirectingFallbacks\UrlGenerator;
 
 
 class PassthroughUrlGenerator implements UrlGenerator

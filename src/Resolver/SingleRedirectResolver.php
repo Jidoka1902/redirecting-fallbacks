@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Service\Redirect\Resolver;
+namespace Jidoka1902\RedirectingFallbacks\Resolver;
 
 
-use App\Service\Redirect\UrlGenerator\UrlGenerator;
+use Jidoka1902\RedirectingFallbacks\UrlGenerator\UrlGenerator;
 
 class SingleRedirectResolver implements RedirectResolver
 {
