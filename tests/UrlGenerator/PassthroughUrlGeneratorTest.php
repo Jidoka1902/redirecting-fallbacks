@@ -1,15 +1,17 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: anton
- * Date: 05.12.17
- * Time: 18:27
- */
 
 namespace Jidoka1902\RedirectingFallbacks\Tests\UrlGenerator;
 
 
-class PassthroughUrlGeneratorTest
-{
+use Jidoka1902\RedirectingFallbacks\UrlGenerator\PassthroughUrlGenerator;
+use PHPUnit\Framework\TestCase;
 
+class PassthroughUrlGeneratorTest extends TestCase
+{
+    public function testGeneratePassthrough()
+    {
+        $generator = new PassthroughUrlGenerator();
+
+        $this->assertEquals("/", $generator->generate("/"));
+    }
 }
