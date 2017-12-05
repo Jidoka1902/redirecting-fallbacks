@@ -141,5 +141,26 @@ class MultipleRedirectResolverTest extends TestCase
             ],
         ];
     }
+
+    /**
+     * this just asserts that the resolve method is called internally
+     * by canResolve
+     */
+    public function testResolveMethodCalls()
+    {
+        $this->urlGenerator->expects($this->exactly(1))->method("generate");
+
+        $resolver = new MultipleRedirectResolver(
+            array(
+                array(
+                    "path" => "/post",
+                    "target" => "/"
+                )
+            ),
+            $this->urlGenerator
+        );
+
+        $resolver->canResolve("/post");
+    }
     
 }
