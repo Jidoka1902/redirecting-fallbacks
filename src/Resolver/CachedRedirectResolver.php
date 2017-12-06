@@ -3,7 +3,7 @@
 namespace Jidoka1902\RedirectingFallbacks\Resolver;
 
 
-use Jidoka1902\RedirectingFallbacks\Cache\NullCache;
+use Jidoka1902\RedirectingFallbacks\Cache\ArrayCache;
 use Jidoka1902\RedirectingFallbacks\Cache\RedirectResolverCache;
 
 class CachedRedirectResolver implements RedirectResolver
@@ -18,7 +18,7 @@ class CachedRedirectResolver implements RedirectResolver
     public function __construct(RedirectResolver $resolver, RedirectResolverCache $cache = null)
     {
         $this->resolver = $resolver;
-        $this->cache = ($cache instanceof RedirectResolverCache) ? $cache : new NullCache();
+        $this->cache = ($cache instanceof RedirectResolverCache) ? $cache : new ArrayCache();
     }
 
     public function canResolve(string $requestPath): bool
