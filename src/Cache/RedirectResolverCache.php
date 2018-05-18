@@ -5,9 +5,23 @@ namespace Jidoka1902\RedirectingFallbacks\Cache;
 
 interface RedirectResolverCache
 {
+
+    /**
+     * @param string $requestPath
+     * @return bool
+     */
     public function isHit(string $requestPath): bool;
 
-    public function set(string $requestPath, string $resolvedPath): void;
+    /**
+     * @param string $requestPath
+     * @param string $resolvedPath
+     */
+    public function set(string $requestPath, string $resolvedPath);
 
-    public function get(string $requestPath): ?string;
+    /**
+     * @param string $requestPath
+     * @return null|string
+     */
+    public function get(string $requestPath);
+
 }

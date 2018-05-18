@@ -25,7 +25,11 @@ class SingleRedirectResolver implements RedirectResolver
         return true;
     }
 
-    public function resolve(string $requestPath): ?string
+    /**
+     * @param string $requestPath
+     * @return null|string
+     */
+    public function resolve(string $requestPath)
     {
         return $this->urlGenerator->generate($this->target);
     }

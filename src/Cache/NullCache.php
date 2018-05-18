@@ -5,17 +5,31 @@ namespace Jidoka1902\RedirectingFallbacks\Cache;
 
 class NullCache implements RedirectResolverCache
 {
+
+    /**
+     * @param string $requestPath
+     * @return bool
+     */
     public function isHit(string $requestPath): bool
     {
         return false;
     }
 
-    public function set(string $requestPath, string $resolvedPath): void
+    /**
+     * @param string $requestPath
+     * @param string $resolvedPath
+     * @return void
+     */
+    public function set(string $requestPath, string $resolvedPath)
     {
         //nothing to do
     }
 
-    public function get(string $requestPath): ?string
+    /**
+     * @param string $requestPath
+     * @return null|string
+     */
+    public function get(string $requestPath)
     {
         return null;
     }

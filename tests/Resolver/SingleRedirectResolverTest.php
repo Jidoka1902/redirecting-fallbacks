@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
 class SingleRedirectResolverTest extends TestCase
 {
 
-    private const OUTPUT = "/";
+    const OUTPUT = "/";
 
     /** @var RedirectResolver */
     private $resolver;

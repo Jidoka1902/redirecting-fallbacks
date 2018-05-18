@@ -14,5 +14,5 @@ interface RedirectResolver
      * @param string $requestPath
      * @return string|null
      */
-    public function resolve(string $requestPath): ?string;
+    public function resolve(string $requestPath);
 }
